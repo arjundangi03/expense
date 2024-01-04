@@ -8,7 +8,7 @@ const expenseRouter = require("./routes/expense.routes");
 const app = express();
 app.use(
   cors({
-    origin: ["https://subtle-cupcake-2e83a9.netlify.app",'http://localhost:3000'],
+    origin: ["https://spectacular-youtiao-8b37f7.netlify.app",'http://localhost:3000'],
   })
   // --
   // --
