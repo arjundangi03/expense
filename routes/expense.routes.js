@@ -21,7 +21,9 @@ expenseRouter.post("/add", authentication, async (req, res) => {
 expenseRouter.get("/all", authentication, async (req, res) => {
   const userId = req.userId;
   const { filter, month, year } = req.query;
+  
   console.log(month, year);
+
   const firstDayOfMonth = new Date(year, month - 1, 1); // Month is 0-based in JavaScript Date
   const lastDayOfMonth = new Date(year, month, 1);
   let filterObj = {
