@@ -24,8 +24,8 @@ expenseRouter.get("/all", authentication, async (req, res) => {
   
   console.log(month, year);
 
-  const firstDayOfMonth = new Date(year, month - 1, 1); // Month is 0-based in JavaScript Date
-  const lastDayOfMonth = new Date(year, month, 1);
+  const firstDayOfMonth = new Date(Date.UTC(year, month - 1, 0));
+  const lastDayOfMonth = new Date(Date.UTC(year, month, 0));
   let filterObj = {
     createdBy: userId,
     date: {
